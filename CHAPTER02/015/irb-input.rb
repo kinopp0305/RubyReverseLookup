@@ -1,3 +1,3 @@
-1+2
-"abcdef".upcase
+p 1+2
+p "abcdef".upcase
 exit

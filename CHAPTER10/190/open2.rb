@@ -1,6 +1,7 @@
 begin
   f = open("sample.txt", "r") # => #<File:sample.txt>
-  f.gets                      # => "abc\n"
+  line = f.gets                      # => "abc\n"
+  puts(line)
 ensure
   f.close
 end

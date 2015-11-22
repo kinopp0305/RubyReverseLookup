@@ -1,25 +1,26 @@
-# -*- coding: shift_jis -*-
+# -*- coding: utf-8 -*-
+### -*- coding: shift_jis -*-
 require 'kconv'
-# Shift_JIS‚Ì•¶Žš—ñ‚ðƒtƒ@ƒCƒ‹‚É‘‚«ž‚ÝA‚»‚Ìƒtƒ@ƒCƒ‹‚ÌŽÀÛ‚Ì•¶ŽšƒR[ƒh‚ð•Ô‚·ŠÖ”
+# Shift_JISï¿½Ì•ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½Éï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÝAï¿½ï¿½ï¿½Ìƒtï¿½@ï¿½Cï¿½ï¿½ï¿½ÌŽï¿½ï¿½Û‚Ì•ï¿½ï¿½ï¿½ï¿½Rï¿½[ï¿½hï¿½ï¿½Ô‚ï¿½ï¿½Öï¿½
 def write_test(mode)
   file = "output"
-# •¶Žš—ñƒŠƒeƒ‰ƒ‹‚ÍShift_JISB
-  open(file, mode) {|f| f.puts "“ú–{Œê‚Å‚·‚æB" }
-# ‚±‚ÌFile.read‚Å‚ÍƒGƒ“ƒR[ƒfƒBƒ“ƒO•ÏŠ·‚³‚ê‚È‚¢Bƒtƒ@ƒCƒ‹‚Ì•¶ŽšƒR[ƒh‚ð„‘ª‚·‚éB
+# ï¿½ï¿½ï¿½ï¿½ï¿½ñƒŠƒeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Shift_JISï¿½B
+  open(file, mode) {|f| f.puts "ï¿½ï¿½{ï¿½ï¿½Å‚ï¿½ï¿½ï¿½B" }
+# ï¿½ï¿½ï¿½ï¿½File.readï¿½Å‚ÍƒGï¿½ï¿½ï¿½Rï¿½[ï¿½fï¿½Bï¿½ï¿½ï¿½Oï¿½ÏŠï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½Bï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½Ì•ï¿½ï¿½ï¿½ï¿½Rï¿½[ï¿½hï¿½ð„‘ï¿½ï¿½ï¿½ï¿½ï¿½B
   Kconv.guess(File.read(file))
 ensure
   File.unlink file
 end
 
-# ƒƒP[ƒ‹ƒGƒ“ƒR[ƒfƒBƒ“ƒOdefault_external‚ÍEUC-JPB
+# ï¿½ï¿½ï¿½Pï¿½[ï¿½ï¿½ï¿½Gï¿½ï¿½ï¿½Rï¿½[ï¿½fï¿½Bï¿½ï¿½ï¿½Oï¿½ï¿½default_externalï¿½ï¿½EUC-JPï¿½B
 Encoding.default_external        # => #<Encoding:EUC-JP>
 Encoding.find("locale")          # => #<Encoding:EUC-JP>
-# ŠO•”ƒGƒ“ƒR[ƒfƒBƒ“ƒO‚ðŽw’è‚µ‚È‚¢‚ÆA•ÏŠ·‚³‚ê‚¸‚É‘‚«ž‚Ü‚ê‚éB
+# ï¿½Oï¿½ï¿½ï¿½Gï¿½ï¿½ï¿½Rï¿½[ï¿½fï¿½Bï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½wï¿½è‚µï¿½È‚ï¿½ï¿½ÆAï¿½ÏŠï¿½ï¿½ï¿½ï¿½ê‚¸ï¿½Éï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 write_test "w+"                  # => #<Encoding:Shift_JIS>
-# ŠO•”ƒGƒ“ƒR[ƒfƒBƒ“ƒO‚ð–¾Ž¦‚·‚é‚ÆƒGƒ“ƒR[ƒfƒBƒ“ƒO•ÏŠ·‚³‚ê‚éB
+# ï¿½Oï¿½ï¿½ï¿½Gï¿½ï¿½ï¿½Rï¿½[ï¿½fï¿½Bï¿½ï¿½ï¿½Oï¿½ð–¾Žï¿½ï¿½ï¿½ï¿½ï¿½ÆƒGï¿½ï¿½ï¿½Rï¿½[ï¿½fï¿½Bï¿½ï¿½ï¿½Oï¿½ÏŠï¿½ï¿½ï¿½ï¿½ï¿½ï¿½B
 write_test "w+:Shift_JIS"        # => #<Encoding:Shift_JIS>
 write_test "w+:UTF-8"            # => #<Encoding:UTF-8>
-# “à•”ƒGƒ“ƒR[ƒfƒBƒ“ƒO‚Í–³Ž‹‚³‚ê‚éB
+# ï¿½ï¿½ï¿½ï¿½ï¿½Gï¿½ï¿½ï¿½Rï¿½[ï¿½fï¿½Bï¿½ï¿½ï¿½Oï¿½Í–ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½B
 write_test "w+:UTF-8:Shift_JIS"  # => #<Encoding:UTF-8>
 write_test "w+:UTF-8:EUC-JP"     # => #<Encoding:UTF-8>
 

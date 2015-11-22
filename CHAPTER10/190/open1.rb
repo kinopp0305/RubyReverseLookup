@@ -1,3 +1,4 @@
 open("sample.txt", "r") do |f|
-  f.gets          # => "abc\n"
+  line = f.gets          # => "abc\n"
+  puts(line)
 end
