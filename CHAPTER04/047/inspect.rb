@@ -1,6 +1,8 @@
+# オブジェクトの文字列表現について
+
 p [1,2,3]
 o = Object.new
-# •§•Û•π•ø•Û•π —øÙ§Ú∂Ø∞˙§À¿ﬂƒÍ§π§Î
+# インスタンス変数を強引に設定する
 o.instance_variable_set(:@a, "instance variable")
 p o
 # >> [1, 2, 3]

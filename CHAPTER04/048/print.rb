@@ -1,27 +1,14 @@
-# ¡Öprint¡×¤ÇÊ¸»úÎó¤òÉ½¼¨¤¹¤ë¡£²ş¹Ô¤µ¤ì¤Ê¤¤¤Î¤Ç¡¢²ş¹Ô¤·¤¿¤¤¾ì¹ç¤ÏÌÀ¼¨Åª¤Ë»ØÄê¤¹¤ë¡£
-print "This is print.\n"
-# ¡Öputs¡×¤ÇÊ¸»úÎó¤òÉ½¼¨¤¹¤ë¡£ºÇ¸å¤Ë²ş¹Ô¤µ¤ì¤ë¡£
-puts "This is puts."
-# ¡Öprint¡×¤â¡Öputs¡×¤âÊ£¿ô¸Ä¤Î¥ª¥Ö¥¸¥§¥¯¥È¤¬»ØÄê¤Ç¤­¤ë¡£¡Öputs¡×¤Ï°ú¿ô¤´¤È¤Ë²ş¹Ô¤¹¤ë¡£
-print 1,"str",/regexp/,"\n"
-puts 1,"str",/regexp/
-# Ìµ°ú¿ô¤Î¡Öputs¡×¤Ï¶õ¹Ô¤ò½ĞÎÏ¤¹¤ë¡£
-puts
-# ¡Öputs¡×¤ËÇÛÎó¤ò»ØÄê¤·¤¿¤éÍ×ÁÇ¤´¤È¤Ë²ş¹Ô¤µ¤ì¤ë¡£
-puts [1,2],3
-# ½ĞÎÏÀè¤¬É¸½à½ĞÎÏ¤Ç¤¢¤ë¤³¤È¤òÌÀ¼¨¤¹¤ë¡£
-$stdout.puts "by IO#puts"
-# print¤ÎÊÌ·Á¼°¡£
-"by display\n".display
-# >> This is print.
-# >> This is puts.
-# >> 1str(?-mix:regexp)
-# >> 1
-# >> str
-# >> (?-mix:regexp)
-# >> 
-# >> 1
-# >> 2
-# >> 3
-# >> by IO#puts
-# >> by display
+# ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’è¡¨ç¤ºã™ã‚‹
+
+print "This is print.\n"    # >> This is print.
+puts "This is puts."        # >> This is puts.
+print 1,"str",/regexp/,"\n" # >> 1str(?-mix:regexp)
+puts 1,"str",/regexp/       # >> 1
+                            # >> str
+                            # >> (?-mix:regexp)
+puts                        # >>
+puts [1,2],3                # >> 1
+                            # >> 2
+                            # >> 3
+$stdout.puts "by IO#puts"   # >> by IO#puts  ï¼ˆ$stdoutã‚’æ˜ç¤ºï¼‰
+"by display\n".display      # >> by display  ï¼ˆdisplayã§è¡¨ç¤ºï¼‰
